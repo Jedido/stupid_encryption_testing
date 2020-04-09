@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script type="text/javascript" src="js/keyGen.js"></script>
+    <script type="text/javascript" src="js/rsa.js"></script>
+    <title>Home page</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <ul>
+      <li><a href="index.html">Back to Home</a></li>
+      <li><a href="encrypt.html">Encrypt a Message</a></li>
+      <li><a href="decrypt.html">Decrypt a Message</a></li>
+    </ul>
+    <p>This uses a simple and somewhat insecure way of generating a public key from a username and password.
+    To start, please log in. You will get an encryption key that you can share with others.</p>
+    <label>Username:</label><br/>
+    <input id="username" type="text"></input><br/>
+    <label>Password:</label><br/>
+    <input id="password" type="password"></input><br/>
+    <label>Confirm Password:</label><br/>
+    <input id="confirm" type="password"></input><br/>
+    <button id="submit">Log In</button>
+    <button id="clear">Sign Out</button>
+    <p id="output"></p>
+    <p>encryption key: <span id="enc_key"></span></p>
+  </body>
+</html>
