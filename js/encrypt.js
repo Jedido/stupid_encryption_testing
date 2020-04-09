@@ -10,10 +10,9 @@
 
   function encrypt() {
     let message = id("message").value;
-    let key = id("key").value;
-    let key_N = key.split(".");
-    key = key_N[0];
-    let N = key_N[1];
+    let key_N = id("key").value.split(".");
+    let key = key_N[0];
+    let n = key_N[1];
     let res = "";
     while (message.length % 3 != 0) {
       message += " ";
@@ -23,7 +22,7 @@
       num += message.charCodeAt(counter + 1) - 31;
       num *= 97;
       num += message.charCodeAt(counter + 2) - 31;
-      res += eMod(num + counter, key, N) + " ";
+      res += eMod(num + counter, key, n) + " ";
     }
     id("output").innerText = res;
   }
