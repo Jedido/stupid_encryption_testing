@@ -1,12 +1,12 @@
+var enc_key;
+var dec_key;
 (function() {
   "use strict";
 
   let id = x => document.getElementById(x);
   let qs = x => document.querySelector(x);
-  var enc_key;
-  var dec_key;
 
-  function init() {
+  function loadCookies() {
     enc_key = getCookie("enc_key");
     dec_key = getCookie("dec_key");
   }

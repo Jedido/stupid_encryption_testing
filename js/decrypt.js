@@ -10,7 +10,7 @@
 
   function decrypt() {
     let res = "";
-    let cipher = id("cipher").value;
+    let cipher = id("message").value;
     let n = enc_key.split(".")[1];
     let counter = 0;
     for (let num of cipher.split(" ")) {
