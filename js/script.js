@@ -26,6 +26,7 @@ var dec_key;
         return c.substring(name.length, c.length);
       }
     }
+    alert("no cookie found");
     return "";
   }
 

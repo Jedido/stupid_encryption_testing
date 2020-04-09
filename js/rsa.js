@@ -165,12 +165,6 @@ function eMod(number, exp, mod) {
   return res;
 }
 
-
-function decryptUsernamePassword(cipher, user, pass) {
-  let keys = getKeys(user, pass);
-  return decrypt(cipher, keys[0], keys[2]);
-}
-
 function getKeys(user, pass) {
   let p = toPrime(user);
   let q = toPrime(pass);

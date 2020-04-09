@@ -8,7 +8,7 @@
     id("submit").addEventListener("click", encrypt);
   }
 
-  function encryptMessage() {
+  function encrypt() {
     let message = id("message").value;
     let key = id("key").value;
     let key_N = key.split(".");
@@ -25,7 +25,7 @@
       num += message.charCodeAt(counter + 2) - 31;
       res += eMod(num + counter, key, N) + " ";
     }
-    return res.trim();
+    id("").innerText = res;
   }
 
   window.addEventListener("load", init);
