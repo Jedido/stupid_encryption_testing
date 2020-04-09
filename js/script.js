@@ -9,6 +9,8 @@ var dec_key;
   function loadCookies() {
     enc_key = getCookie("enc_key");
     dec_key = getCookie("dec_key");
+    console.log('enc_key is ' + enc_key);
+    id("enc_key").innerText = enc_key;
   }
 
   function getCookie(cname) {
