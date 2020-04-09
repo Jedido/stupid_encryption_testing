@@ -25,7 +25,7 @@
       num += message.charCodeAt(counter + 2) - 31;
       res += eMod(num + counter, key, N) + " ";
     }
-    id("").innerText = res;
+    id("output").innerText = res;
   }
 
   window.addEventListener("load", init);
