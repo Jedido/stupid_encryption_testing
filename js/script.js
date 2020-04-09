@@ -6,7 +6,7 @@ var dec_key;
   let id = x => document.getElementById(x);
   let qs = x => document.querySelector(x);
 
-  function loadCookies() {
+  function init() {
     enc_key = getCookie("enc_key");
     dec_key = getCookie("dec_key");
     console.log('enc_key is ' + enc_key);
