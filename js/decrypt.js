@@ -21,7 +21,6 @@
       res += String.fromCharCode(c1 + 31) + String.fromCharCode(c2 + 31) + String.fromCharCode(c3 + 31);
       counter+=3;
     }
-    console.log(res);
     id("output").innerText = res.trim();
   }
 
