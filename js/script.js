@@ -9,8 +9,12 @@ var qs = x => document.querySelector(x);
   function init() {
     enc_key = getCookie("enc_key");
     dec_key = getCookie("dec_key");
-    console.log('enc_key is ' + enc_key);
     id("enc_key").innerText = enc_key;
+    /*
+    if (!enc_key) {
+      window.location.href = "login.html";
+    }
+    */
   }
 
   function getCookie(cname) {
