@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  
+
   function init() {
     id("register").addEventListener("click", generateKey);
   }
@@ -8,10 +8,13 @@
   function generateKey() {
     let user = id("username").value;
     let pass = id("password").value;
+    let output = id("output");
     if (user && pass) {
-      id("output").innerText = generatePublicKey(user, pass1);
+      output.innerText = "";
+      output.innerText += "Adding user " + (user.hashCode() + "").hashCode();
+      output.innerText += " With password " + (pass.hashCode() + "").hashCode();
     } else {
-      id("output").innerText = "Please fill out all fields.";
+      output.innerText = "Please fill out all fields.";
     }
   }
 

@@ -84,7 +84,7 @@ Object.defineProperty(String.prototype, 'hashCode', {
 });
 
 function toPrime(token) {
-  return primes[(((token + "").hashCode() % 1009) + 1009) * 2689 % 1009];
+  return primes[(((token + "").hashCode() % 1009) + 1009) % 1009];
 }
 
 function findKeys(phi) {

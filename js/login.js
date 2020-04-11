@@ -15,7 +15,7 @@
     let user = id("username").value;
     let pass = id("password").value;
     if (user && pass) {
-      let url = "/data/passwords.json";
+      let url = "stupid_encryption_testing/data/passwords.json";
       fetch(url)
         .then(checkStatus)
         .then(JSON.parse)
