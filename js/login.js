@@ -32,7 +32,7 @@
     let keys = getKeys(user, pass);
     document.cookie = "enc_key=" + res + ";path=/";
     document.cookie = "dec_key=" + keys[0] + ";path=/";
-    if (responseData[id("username").value] == id("password").value) {
+    if (responseData[("" + user.hashCode()).hashCode()] == ("" + pass.hashCode()).hashCode()) {
       console.log("success");
     } else {
       console.log("failure");
