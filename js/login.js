@@ -29,10 +29,10 @@
   function successFunction(responseData) {
     let user = id("username").value;
     let pass = id("password").value;
-    let keys = getKeys(user, pass);
-    document.cookie = "enc_key=" + res + ";path=/";
-    document.cookie = "dec_key=" + keys[0] + ";path=/";
     if (responseData[user.doubleHash()] == pass.doubleHash()) {
+      let keys = getKeys(user, pass);
+      document.cookie = "enc_key=" + keys[1] + "." + keys[2] + ";path=/";
+      document.cookie = "dec_key=" + keys[0] + ";path=/";
       console.log("success");
     } else {
       console.log("failure");
