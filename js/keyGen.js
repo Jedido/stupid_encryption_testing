@@ -11,8 +11,8 @@
     let output = id("output");
     if (user && pass) {
       output.innerText = "";
-      output.innerText += "Adding user " + (user.hashCode() + "").hashCode();
-      output.innerText += " With password " + (pass.hashCode() + "").hashCode();
+      output.innerText += "Adding user " + user.doubleHash();
+      output.innerText += " With password " + pass.doubleHash();
     } else {
       output.innerText = "Please fill out all fields.";
     }

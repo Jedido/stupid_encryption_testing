@@ -83,6 +83,12 @@ Object.defineProperty(String.prototype, 'hashCode', {
   }
 });
 
+Object.defineProperty(String.prototype, 'doubleHash', {
+  value: function() {
+    return (this.hashCode() + "").hashCode();
+  }
+});
+
 function toPrime(token) {
   return primes[(((token + "").hashCode() % 1009) + 1009) % 1009];
 }
