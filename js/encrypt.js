@@ -1,9 +1,6 @@
 (function() {
   "use strict";
 
-  let id = x => document.getElementById(x);
-  let qs = x => document.querySelector(x);
-
   function init() {
     id("submit").addEventListener("click", encrypt);
   }

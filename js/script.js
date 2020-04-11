@@ -6,7 +6,6 @@ var qs = x => document.querySelector(x);
 (function() {
   "use strict";
 
-
   function init() {
     enc_key = getCookie("enc_key");
     dec_key = getCookie("dec_key");
