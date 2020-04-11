@@ -1,10 +1,11 @@
 var enc_key;
 var dec_key;
+var id = x => document.getElementById(x);
+var qs = x => document.querySelector(x);
+
 (function() {
   "use strict";
 
-  let id = x => document.getElementById(x);
-  let qs = x => document.querySelector(x);
 
   function init() {
     enc_key = getCookie("enc_key");
